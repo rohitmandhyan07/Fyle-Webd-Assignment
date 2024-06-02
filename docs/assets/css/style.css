@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body{
     font-family: "Cormorant SC", serif;
     font-style: normal;
@@ -14,7 +19,70 @@ body{
     width: 160px;
     height: 50px;
 }
+.firstGrid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 2px solid red ;
+    grid-column-gap: 68px;
+    /* margin-top: 100px; */
+}
+.grid-right-img{
+  width: 487px;
+  margin-top: 100px;
+  /* height: 737px; */
+  /* position: absolute;
+  top: 100px;
+  left: 1058px; */
+}
+img{
+  display: inline-block;
+  width: 100%;
+  height: auto;
 
+}
+.grid-left-text{
+  grid-column-start: 2;
+}
+.award{
+  width: 251px;
+  height: 30px;
+  /* UI Properties */
+  text-align: left;
+  font: normal normal 600 30px/110px Cormorant SC;
+  letter-spacing: 0px;
+  color: #FF3147;
+  text-transform: uppercase;
+  opacity: 1;
+  margin-bottom: 39px;
+  margin-top: 243px;
+}
+.digital-agency{
+  /* Layout Properties */
+width: 614px;
+height: 140px;
+/* UI Properties */
+text-align: left;
+font: normal normal bold 60px/80px Cormorant SC;
+letter-spacing: 0px;
+color: #000000;
+text-transform: uppercase;
+opacity: 1;
+}
+.short{
+  /* Layout Properties */
+width: 584px;
+height: 83px;
+/* UI Properties */
+/* text-align: left; */
+font: normal normal normal 16px/30px Poppins;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+margin-top: 50px;
+}
+#contactUs{
+  margin-top: 60px;
+}
 /* .cormorant-sc-light {
     font-family: "Cormorant SC", serif;
     font-weight: 300;

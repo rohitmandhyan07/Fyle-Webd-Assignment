@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover Change</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .image-container {
+        flex: 2;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .hover-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hover-item {
+        padding: 20px;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .hover-item:hover {
+        background-color: #f0f0f0;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img id="main-image" src="assets/images/hero/hero.png" alt="Main Image">
+        </div>
+        <div class="hover-container">
+            <div class="hover-item" data-image="assets/images/1childWithMufler/1@2x.png">
+                <p>Genderless Kei – Japan’s Hot</p>
+                <p>Set to launch on the manufacturer’s new A330neo aircraft in 2017, it's offering lots of</p>
+            </div>
+            <div class="hover-item" data-image="assets/images/2bottlesAndPlant/2@2x.png">
+                <p>Better Strategy & Quality</p>
+                <p>Set to launch on the manufacturer’s new A330neo aircraft in 2017, it's offering lots of</p>
+            </div>
+            <div class="hover-item" data-image="assets/images/3fruitBasket/3@2x.png">
+                <p>Genderless Kei – Japan’s Hot</p>
+                <p>Set to launch on the manufacturer’s new A330neo aircraft in 2017, it's offering lots of</p>
+            </div>
+        </div>
+    </div>
+    <script >
+    document.addEventListener('DOMContentLoaded', () => {
+        const hoverItems = document.querySelectorAll('.hover-item');
+        const mainImage = document.getElementById('main-image');
+
+        hoverItems.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                const newImage = item.getAttribute('data-image');
+                mainImage.src = newImage;
+            });
+        });
+    });
+
+    </script>
+</body>
+</html>

@@ -217,12 +217,12 @@ https://jsfiddle.net/t5dwp7pg/1/
   opacity: 1
 }
 
-.slider-container {
+/* .slider-container {
   position: absolute;
-  /* overflow: hidden; */
+  overflow: hidden;
   width: 100%;
   height: 526px;
-  margin: 50px auto; /* Max width for better visibility */
+  margin: 50px auto; Max width for better visibility
   left: 373px;
   top: 1271px;
   max-width: 1200px;
@@ -232,9 +232,9 @@ https://jsfiddle.net/t5dwp7pg/1/
 .slider {
   display: flex;
   transition: transform 0.5s ease;
-  /* position: relative; */
-  width: calc(370px * 4); /* Width of all images combined */
-}
+  position: relative;
+  width: calc(370px * 4); Width of all images combined
+} */
 .webd {
   position: absolute;
   top: 209.58px;
@@ -592,7 +592,7 @@ div.fifth{
   left: -1px;
   width: 1920px;
   /* width: 1320px; */
-  height: fit-content;
+  height: 602px;
   background: #FAFAFA 0% 0% no-repeat padding-box;
   opacity: 1;
 }
@@ -884,102 +884,102 @@ div.sixth{
   width: 1920px; 
   margin: 0 auto;
   height: 1030px;  
-  /* background-color: #bdd3de;  */
-  /* hoverflow: hidden; */
   overflow: hidden;
-  /* border: 2px solid red; */
   background: #FAFAFA 0% 0% no-repeat padding-box;
   opacity: 1;
 }
+
 .text-top{
   position: relative;
 }
 
+.slider-container {
+  position: relative;
+  width: 1200px;
+  /* overflow: hidden; */
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  margin-left: var(--x);
+  animation: slide 9s infinite;
+  overflow: hidden;
+  height: 870px;
+}
+
 .panel {
-  position: absolute;
-	/* margin: 0 auto; */
+  width: 33.33%;
+  position: relative;
+  height: 526px;
   top: 334px;
-  left: 375px;
-	height: 526px;  
-	position: relative;
-	-webkit-perspective: 600px;
-	-moz-perspective: 600px;
 }
 
 .panel .front,
 .panel .back {
-	text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  backface-visibility: hidden;
+  transition: all .4s ease-in-out;
 }
-	
+
 .panel .front {
-	height: inherit;
-	position: absolute;
-	top: 0;
-	z-index: 900;
-	text-align: center;
-	-webkit-transform: rotateX(0deg) rotateY(0deg);
-	   -moz-transform: rotateX(0deg) rotateY(0deg);
-	-webkit-transform-style: preserve-3d;
-	   -moz-transform-style: preserve-3d;
-	-webkit-backface-visibility: hidden;
-	   -moz-backface-visibility: hidden;
-	-webkit-transition: all .4s ease-in-out;
-	   -moz-transition: all .4s ease-in-out;
-		-ms-transition: all .4s ease-in-out;
-		 -o-transition: all .4s ease-in-out;
-			transition: all .4s ease-in-out;
+  z-index: 900;
+  transform: rotateY(0deg);
 }
 
 .panel .back {
-	height: inherit;
-	position: absolute;
-	top: 0;
-	z-index: 1000;
-	-webkit-transform: rotateY(-180deg);
-	   -moz-transform: rotateY(-180deg);
-	-webkit-transform-style: preserve-3d;
-	   -moz-transform-style: preserve-3d;
-	-webkit-backface-visibility: hidden;
-	   -moz-backface-visibility: hidden;
-	-webkit-transition: all .4s ease-in-out;
-	   -moz-transition: all .4s ease-in-out;
-		-ms-transition: all .4s ease-in-out;
-		 -o-transition: all .4s ease-in-out;
-			transition: all .4s ease-in-out;
+  z-index: 1000;
+  transform: rotateY(-180deg);
 }
-.panel.flip .front {
-	z-index: 900;
-	-webkit-transform: rotateY(180deg);
-	-moz-transform: rotateY(180deg);
+
+.box1 {
+  width: 370px;
+  height: 526px;
+  border-radius: 10px;
 }
-.panel.flip .back {
-	z-index: 1000;
-	-webkit-transform: rotateX(0deg) rotateY(0deg);
-	-moz-transform: rotateX(0deg) rotateY(0deg);
+
+.box2 {
+  background-color: #ff7e70;
+  width: 370px;
+  height: 526px;
+  border-radius: 10px;
 }
-.box1{
-	/* background-color: #14bcc8; */
-	width: 370px;
-	height: 526px;
-	/* margin: 0 auto; */
-	/* padding: 20px; */
-	border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
+
+.radio-buttons {
+  position: absolute;
+  top: 350px;
+  left: calc(375px  + var(--x)) ;
+  display: flex;
+  gap: 10px;
 }
-.box2{
-	background-color: #ff7e70;
-	width: 370px;
-	height: 526px;
-	margin: 0 auto;
-	/* padding: 20px; */
-	border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
+
+.radio-buttons img {
+  cursor: pointer;
 }
-/* .box1 img{
-  display: none;
-} */
-.box1 img.active{
-  display: block;
+
+.active {
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/1sideScrollRadio/1.svg);
+}
+.active-blackdot{
+  width: 8px;
+  height: 8px;
+}
+
+.inactive, .inactive-copy {
+  width: 8px;
+  height: 8px;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33.33% {
+     transform: translateX(-10%);
+  }
+  66.66% { transform: translateX(-20%); }
+  100% { transform: translateX(0); }
 }

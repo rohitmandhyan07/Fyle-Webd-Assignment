@@ -1,0 +1,217 @@
+<div class="wrapper">
+                <!-- <h1>CSS 3D FLIP BOX</h1>
+                <h3>Flipping content to a div (Transitions and 3D Transforms)</h3> -->
+
+                <div class="text-top"> 
+                    <p class="l4">WHAT WE DO</p>
+                    <p class="l5">Services provide for you</p>
+                    <p class="l6">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque vitae ante at elit fringilla ac at purus, Morbi sed lacus nec risus finibus feugiat et fermentum</p>
+                </div>
+
+                  <div class="col_third">
+                    <div class="hover panel">
+                      <div class="front">
+                        <div class="box1" id="box1-1">
+                          <p><img src="assets/images/1childWithMufler/1@2x.png" alt="Image 1"></p>
+                        </div>
+                      </div>
+                      <div class="back">
+                        <div class="box2">
+                          <p>
+                            <div class="redDiv" id="redD"> 
+                                <!-- <img src="assets/images/iconConsole/icon@2x.png" alt="" class="console-img"> -->
+                                <p class="webd">WEB DEVELOPMENT</p>
+                                <p class="text-1">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                                <!-- <button type="button" class="read" id="readMore">READ MORE
+                                    <img src="assets/images/Arrow/arrow@2x.png" alt="" class="arrow">
+                                </button> -->
+                                <a href="https://www.fylehq.com/" target="_blank" rel="noopener noreferrer">
+                                    <input type="submit" class="read" id="image-button" value="READ MORE"></input>
+                                </a>
+                            </div>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+            
+                    <div class="col_third">
+                    <div class="hover panel">
+                      <div class="front">
+                        <div class="box1" id="box1-2">
+                          <p><img src="assets/images/2bottlesAndPlant/2@2x.png" alt="Image 2"></p>
+                        </div>
+                      </div>
+                      <div class="radio-buttons">
+                        <img src="assets/images/1sideScrollRadio/1@2x.png" alt="" class="active" id="dot-1">
+                        <img src="assets/images/2blackRadio/2@2x.png" alt="" class="inactive" id="dot-2">
+                        <img src="assets/images/2blackRadio/2@2x.png" alt="" class="inactive-copy" id="dot-3">
+                    </div>
+                      <div class="back">
+                        <div class="box2">
+                          <p>
+                            <div class="redDiv" id="redD"> 
+                                <!-- <img src="assets/images/iconConsole/icon@2x.png" alt="" class="console-img"> -->
+                                <p class="webd">WEB DEVELOPMENT</p>
+                                <p class="text-1">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                                <!-- <button type="button" class="read" id="readMore">READ MORE
+                                    <img src="assets/images/Arrow/arrow@2x.png" alt="" class="arrow">
+                                </button> -->
+                                <a href="https://www.fylehq.com/" target="_blank" rel="noopener noreferrer">
+                                    <input type="submit" class="read" id="image-button" value="READ MORE"></input>
+                                </a>
+                            </div>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+            
+                    <div class="col_third end">
+                    <div class="hover panel">
+                      <div class="front">
+                        <div class="box1" id="box1-3">
+                          <p><img src="assets/images/3fruitBasket/3@2x.png" alt="Image 3"></p>
+                        </div>
+                      </div>
+                      <div class="back">
+                        <div class="box2">
+                          <p>
+                            <div class="redDiv" id="redD"> 
+                                <!-- <img src="assets/images/iconConsole/icon@2x.png" alt="" class="console-img"> -->
+                                <p class="webd">WEB DEVELOPMENT</p>
+                                <p class="text-1">Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</p>
+                                <!-- <button type="button" class="read" id="readMore">READ MORE
+                                    <img src="assets/images/Arrow/arrow@2x.png" alt="" class="arrow">
+                                </button> -->
+                                <a href="https://www.fylehq.com/" target="_blank" rel="noopener noreferrer">
+                                    <input type="submit" class="read" id="image-button" value="READ MORE"></input>
+                                </a>
+                            </div>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 </div>
+
+
+
+
+
+
+
+
+                 .wrapper{
+                    position: relative;
+                    top: -900px;
+                    left: 0; 
+                    width: 1920px; 
+                    margin: 0 auto;
+                    height: 1030px;  
+                    /* background-color: #bdd3de;  */
+                    /* hoverflow: hidden; */
+                    overflow: hidden;
+                    /* border: 2px solid red; */
+                    background: #FAFAFA 0% 0% no-repeat padding-box;
+                    opacity: 1;
+                  }
+                  .text-top{
+                    position: relative;
+                  }
+                  
+                  .panel {
+                    position: absolute;
+                      /* margin: 0 auto; */
+                    top: 334px;
+                    left: 375px;
+                      height: 526px;  
+                      position: relative;
+                      -webkit-perspective: 600px;
+                      -moz-perspective: 600px;
+                  }
+                  
+                  .panel .front,
+                  .panel .back {
+                      text-align: center;
+                  }
+                      
+                  .panel .front {
+                      height: inherit;
+                      position: absolute;
+                      top: 0;
+                      z-index: 900;
+                      text-align: center;
+                      -webkit-transform: rotateX(0deg) rotateY(0deg);
+                         -moz-transform: rotateX(0deg) rotateY(0deg);
+                      -webkit-transform-style: preserve-3d;
+                         -moz-transform-style: preserve-3d;
+                      -webkit-backface-visibility: hidden;
+                         -moz-backface-visibility: hidden;
+                      -webkit-transition: all .4s ease-in-out;
+                         -moz-transition: all .4s ease-in-out;
+                          -ms-transition: all .4s ease-in-out;
+                           -o-transition: all .4s ease-in-out;
+                              transition: all .4s ease-in-out;
+                  }
+                  
+                  .panel .back {
+                      height: inherit;
+                      position: absolute;
+                      top: 0;
+                      z-index: 1000;
+                      -webkit-transform: rotateY(-180deg);
+                         -moz-transform: rotateY(-180deg);
+                      -webkit-transform-style: preserve-3d;
+                         -moz-transform-style: preserve-3d;
+                      -webkit-backface-visibility: hidden;
+                         -moz-backface-visibility: hidden;
+                      -webkit-transition: all .4s ease-in-out;
+                         -moz-transition: all .4s ease-in-out;
+                          -ms-transition: all .4s ease-in-out;
+                           -o-transition: all .4s ease-in-out;
+                              transition: all .4s ease-in-out;
+                  }
+                  .panel.flip .front {
+                      z-index: 900;
+                      -webkit-transform: rotateY(180deg);
+                      -moz-transform: rotateY(180deg);
+                  }
+                  .panel.flip .back {
+                      z-index: 1000;
+                      -webkit-transform: rotateX(0deg) rotateY(0deg);
+                      -moz-transform: rotateX(0deg) rotateY(0deg);
+                  }
+                  .box1{
+                      /* background-color: #14bcc8; */
+                      width: 370px;
+                      height: 526px;
+                      /* margin: 0 auto; */
+                      /* padding: 20px; */
+                      border-radius: 10px;
+                      -moz-border-radius: 10px;
+                      -webkit-border-radius: 10px;
+                  }
+                  .box2{
+                      background-color: #ff7e70;
+                      width: 370px;
+                      height: 526px;
+                      margin: 0 auto;
+                      /* padding: 20px; */
+                      border-radius: 10px;
+                      -moz-border-radius: 10px;
+                      -webkit-border-radius: 10px;
+                  }
+                  /* .box1 img{
+                    display: none;
+                  } */
+                  /* .box1 img.active{
+                    display: block;
+                  } */
+                  
+                  @keyframes slide {
+                    0% { transform: translateX(0); }
+                    33.33% { transform: translateX(-33.33%); }
+                    66.66% { transform: translateX(-66.66%); }
+                    100% { transform: translateX(-100%); }
+                  }

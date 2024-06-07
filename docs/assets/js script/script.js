@@ -34,3 +34,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   
+  $(document).ready(function() {
+    let currentIndex = 0;
+    const totalImages = 3;
+    const interval = 3000; // Change image every 3 seconds
+
+    function updateRadioButtons(index) {
+        $('.radio-buttons img').removeClass('active').addClass('active-blackdot');
+        $(`#dot-${index + 1}`).removeClass('active-blackdot').addClass('active');
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalImages;
+        $('.slider').css('transform', `translateX(-${currentIndex * 33.33}%)`);
+        updateRadioButtons(currentIndex);
+    }
+
+    setInterval(nextSlide, interval);
+    updateRadioButtons(currentIndex);
+
+    $('.radio-buttons img').click(function() {
+        const id = $(this).attr('id');
+        currentIndex = parseInt(id.split('-')[1]) - 1;
+        $('.slider').css('transform', `translateX(-${currentIndex * 33.33}%)`);
+        updateRadioButtons(currentIndex);
+    });
+});

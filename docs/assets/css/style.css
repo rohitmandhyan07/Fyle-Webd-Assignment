@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body{
-    transform: scale(0.75); /* Scale the body to x% */
+    /* transform: scale(0.75); Scale the body to x% */
     transform-origin: top left; /* Set the origin to the top-left corner */
 }
 .left-text, .right-img, img{

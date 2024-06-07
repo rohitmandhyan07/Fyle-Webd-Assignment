@@ -370,47 +370,6 @@ https://jsfiddle.net/t5dwp7pg/1/
   border-radius: 50%;
 }  */
 
-.active {
-  display: inline-block;
-  position: absolute;
-  top: 596px;
-  left: -408px;
-  width: 30px;
-  height: 30px;
-  /* UI Properties */
-  /* background-image:  url('/docs/assets/images/1sideScrollRadio/1.svg');  */
-  background-image: url(../images/1sideScrollRadio/1.svg);
-  opacity: 1;
-  /* z-index: 2; */
-}
-
-.inactive {
-  display: inline-block;
-  position: absolute;
-  top: 608px;
-  left: -358px;
-  width: 8px;
-  height: 8px;
-  /* UI Properties */
-  /* background: transparent url('/docs/assets/images/2blackRadio/2.svg') 0% 0% no-repeat padding-box; */
-  background: transparent url(../images/2blackRadio/2.svg) 0% 0% no-repeat padding-box;
-  opacity: 1;
-  z-index: 2;
-}
-
-.inactive-copy {
-  display: inline-block;
-  position: absolute;
-  top: 608px;
-  left: -330px;
-  width: 8px;
-  height: 8px;
-  /* UI Properties */
-  /* background: transparent url('/docs/assets/images/2blackRadio/2.svg') 0% 0% no-repeat padding-box; */
-  background: transparent url(../images/2blackRadio/2.svg) 0% 0% no-repeat padding-box;
-  opacity: 1;
-  z-index: 2;
-}
 
 :root {
   --x: 373px;
@@ -999,6 +958,7 @@ div.sixth {
   width: 100%;
   /* margin-left: var(--x); */
   animation: slide 9s infinite;
+  /* animation-delay: 4s; */
   overflow: hidden;
   height: 870px;
 }
@@ -1114,10 +1074,10 @@ div.sixth {
 
 .radio-buttons {
   position: absolute;
-  top: 350px;
+  top: 335px;
   left: calc(375px + var(--x));
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 
 .radio-buttons img {
@@ -1125,20 +1085,85 @@ div.sixth {
 }
 
 .active {
+  display: inline-block;
+  position: absolute;
+  top: 596px;
+  left: -408px;
   width: 30px;
   height: 30px;
-  background-image: url(../images/1sideScrollRadio/1.svg);
+  /* UI Properties */
+  /* background-image:  url('/docs/assets/images/1sideScrollRadio/1.svg');  */
+  /* background-image: url(../images/1sideScrollRadio/1.svg); */
+  opacity: 1;
+  /* z-index: 2; */
 }
+
+.inactive {
+  display: inline-block;
+  position: absolute;
+  top: 606.9px;
+  left: -365px;
+  width: 8px;
+  height: 8px;
+  /* UI Properties */
+  /* background: transparent url('/docs/assets/images/2blackRadio/2.svg') 0% 0% no-repeat padding-box; */
+  /* background: transparent url(../images/2blackRadio/2.svg) 0% 0% no-repeat padding-box; */
+  opacity: 1;
+  z-index: 2;
+}
+
+.inactive-copy {
+  display: inline-block;
+  position: absolute;
+  top: 606.9px;
+  left: -330px;
+  width: 8px;
+  height: 8px;
+  /* UI Properties */
+  /* background: transparent url('/docs/assets/images/2blackRadio/2.svg') 0% 0% no-repeat padding-box; */
+  /* background: transparent url(../images/2blackRadio/2.svg) 0% 0% no-repeat padding-box; */
+  opacity: 1;
+  z-index: 2;
+}
+
 
 .active-blackdot {
+  position: relative;
+  top:606.9px;
+  left: -397px;  
   width: 8px;
   height: 8px;
 }
 
-.inactive,
+/*  .inactive,
 .inactive-copy {
   width: 8px;
-  height: 8px;
+  height: 8px; 
+} */
+/* img.active {
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/1sideScrollRadio/1.svg); 
+} */
+img.active-2{
+ width: 30px;
+ height: 30px; 
+ position: absolute ;
+ top: 595.9px;
+ left: -375.9px;
+}
+img.active-3{
+  width: 30px;
+  height: 30px; 
+  position: absolute ;
+  top: 595.5px;
+  left: -341px;
+ }
+.display{
+  display: initial;
+}
+.display-none{
+  display: none;
 }
 
 @keyframes slide {

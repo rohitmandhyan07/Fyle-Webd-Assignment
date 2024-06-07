@@ -40,8 +40,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const interval = 3000; // Change image every 3 seconds
 
     function updateRadioButtons(index) {
-        $('.radio-buttons img').removeClass('active').addClass('active-blackdot');
-        $(`#dot-${index + 1}`).removeClass('active-blackdot').addClass('active');
+        $('.radio-buttons img').removeClass('active').addClass('inactive');
+        $(`#dot-${index -1 }`).removeClass('inactive').addClass('active');
+
+
+        
+
+        // $('.radio-buttons img').removeClass('active').addClass('inactive');
+        // $(`#dot-${index}`).removeClass('display').addClass('display-none');
+        // $(`#dot-${index}`).removeClass('display-none').addClass('display');
     }
 
     function nextSlide() {
